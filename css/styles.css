@@ -282,11 +282,29 @@ a { color: inherit; text-decoration: none; }
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 34px 28px;
+  overflow: hidden;
   box-shadow: var(--shadow-sm);
   transition: transform 0.25s, box-shadow 0.25s;
 }
 .process-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+.process-media {
+  margin: 0;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  background: rgba(10, 92, 54, 0.08);
+}
+.process-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.process-card:hover .process-media img { transform: scale(1.06); }
+.process-body {
+  position: relative;
+  padding: 30px 28px 34px;
+}
 .step-num {
   position: absolute;
   top: 20px; right: 24px;
